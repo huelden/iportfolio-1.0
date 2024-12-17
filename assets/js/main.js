@@ -1,16 +1,11 @@
-/**
-* Template Name: iPortfolio
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 (function() {
   "use strict";
 
   /**
    * Header toggle
+   * Alternar cabeçalho
    */
   const headerToggleBtn = document.querySelector('.header-toggle');
 
@@ -23,6 +18,7 @@
 
   /**
    * Hide mobile nav on same-page/hash links
+   * Ocultar navegação móvel em links de mesma página/hash
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
@@ -35,6 +31,7 @@
 
   /**
    * Toggle mobile nav dropdowns
+   * Alternar menus suspensos de navegação móvel
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
     navmenu.addEventListener('click', function(e) {
@@ -47,6 +44,8 @@
 
   /**
    * Preloader
+   * 
+Pré-carregador
    */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
@@ -57,6 +56,7 @@
 
   /**
    * Scroll top button
+   * Botão de rolagem superior
    */
   let scrollTop = document.querySelector('.scroll-top');
 
@@ -78,6 +78,7 @@
 
   /**
    * Animation on scroll function and init
+   * Animação na função de rolagem e inicialização
    */
   function aosInit() {
     AOS.init({
@@ -91,6 +92,7 @@
 
   /**
    * Init typed.js
+   * Init digitado.js
    */
   const selectTyped = document.querySelector('.typed');
   if (selectTyped) {
@@ -107,11 +109,13 @@
 
   /**
    * Initiate Pure Counter
+   * Iniciar contador puro
    */
   new PureCounter();
 
   /**
    * Animate the skills items on reveal
+   * anima os itens de habilidades revelados
    */
   let skillsAnimation = document.querySelectorAll('.skills-animation');
   skillsAnimation.forEach((item) => {
@@ -129,6 +133,7 @@
 
   /**
    * Initiate glightbox
+   * Iniciar Glightbox
    */
   const glightbox = GLightbox({
     selector: '.glightbox'
@@ -136,6 +141,7 @@
 
   /**
    * Init isotope layout and filters
+   * Layout e filtros de isótopos de inicialização
    */
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
@@ -169,6 +175,8 @@
 
   /**
    * Init swiper sliders
+   * 
+Controles deslizantes de inicialização
    */
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
@@ -188,6 +196,7 @@
 
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
+   * Posição correta de rolagem no carregamento da página para URLs contendo links hash
    */
   window.addEventListener('load', function(e) {
     if (window.location.hash) {
@@ -206,6 +215,7 @@
 
   /**
    * Navmenu Scrollspy
+   * Scrollspy do menu de navegação
    */
   let navmenulinks = document.querySelectorAll('.navmenu a');
 
