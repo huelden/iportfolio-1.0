@@ -106,7 +106,8 @@ var _extends = Object.assign || function (target) {
 };
 
 /**
- * Device detector
+ * Device detector 
+ * Detector de dispositivo
  */
 
 var fullNameRe = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i;
@@ -156,6 +157,7 @@ var detect = new Detector();
 
 /**
  * Adds multiple classes on node
+ * Adiciona várias classes no node
  * @param {DOMNode} node
  * @param {array}  classes
  */
@@ -167,6 +169,7 @@ var addClasses = function addClasses(node, classes) {
 
 /**
  * Removes multiple classes from node
+ * Remove várias classes de node
  * @param {DOMNode} node
  * @param {array}  classes
  */
@@ -193,6 +196,7 @@ var fireEvent = function fireEvent(eventName, data) {
 
 /**
  * Set or remove aos-animate class
+ * Definir ou remover classe aos-animate
  * @param {node} el         element
  * @param {int}  top        scrolled distance
  */
@@ -253,6 +257,9 @@ var handleScroll = function handleScroll($elements) {
 /**
  * Get offset of DOM element
  * like there were no transforms applied on it
+ * 
+Obtenha o deslocamento do elemento DOM
+ * como se não houvesse transformações aplicadas nele
  *
  * @param  {Node} el [DOM element]
  * @return {Object} [top and left offset]
@@ -275,7 +282,8 @@ var offset = function offset(el) {
 
 /**
  * Get inline option with a fallback.
- *
+ *Obtenha a opção inline com um substituto.
+
  * @param  {Node} el [Dom element]
  * @param  {String} key [Option key]
  * @param  {String} fallback [Default (fallback) value]
@@ -301,6 +309,10 @@ var getInlineOption = (function (el, key, fallback) {
  * basing on element's settings like:
  * - anchor
  * - offset
+ * Calcular deslocamento
+ * com base nas configurações do elemento como:
+ * - âncora
+ * - desvio
  *
  * @param  {Node} el [Dom element]
  * @return {Integer} [Final offset that will be used to trigger animation in good position]
@@ -405,6 +417,10 @@ var prepare = function prepare($elements, options) {
  * Generate initial array with elements as objects
  * This array will be extended later with elements attributes values
  * like 'position'
+ * 
+* Gere array inicial com elementos como objetos
+ * Este array será estendido posteriormente com valores de atributos de elementos
+ * como 'posição'
  */
 var elements = (function () {
   var elements = document.querySelectorAll('[data-aos]');
@@ -417,6 +433,9 @@ var elements = (function () {
  * *******************************************************
  * AOS (Animate on scroll) - wowjs alternative
  * made to animate elements on scroll in both directions
+ * 
+AOS (animar na rolagem) - alternativa wowjs
+ * feito para animar elementos na rolagem em ambas as direções
  * *******************************************************
  */
 
@@ -530,6 +549,13 @@ var isDisabled = function isDisabled(optionDisable) {
  *   window resize and orientation change
  * - Attach function that handle scroll and everything connected to it
  *   to window scroll event and fire once document is ready to set initial state
+ * Inicializando AOS
+ * - Criar opções mesclando padrões com opções definidas pelo usuário
+ * - Defina atributos em <body> como configuração global - css depende disso
+ * - Anexe elementos de preparação a options.startEvent,
+ * redimensionamento da janela e mudança de orientação
+ * - Anexar função que controla a rolagem e tudo conectado a ela
+ * para o evento de rolagem da janela e acionado quando o documento estiver pronto para definir o estado inicial
  */
 var init = function init(settings) {
   options = _extends(options, settings);

@@ -401,6 +401,11 @@ var prepare = function prepare($elements, options) {
  * Generate initial array with elements as objects
  * This array will be extended later with elements attributes values
  * like 'position'
+ 
+ * Gere array inicial com elementos como objetos
+ * Este array será estendido posteriormente com valores de atributos de elementos
+ * como 'posição'
+ 
  */
 var elements = (function () {
   var elements = document.querySelectorAll('[data-aos]');
